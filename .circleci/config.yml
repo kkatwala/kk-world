@@ -15,7 +15,7 @@ jobs:
       - image: cimg/node:14.10.1
     steps:
           - checkout
-          - run: echo Welcome $My_Env_Var    
+          - run: echo 'Welcome $My_Env_Var'
           - run: ls -altr  
 workflows:
   version: 2
