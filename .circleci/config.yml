@@ -15,7 +15,7 @@ jobs:
       - image: cimg/node:14.10.1
     steps:
           - checkout
-          - run: echo $My_Env_Var
+          - run: echo $My_Env_Var1
           - run: ls -altr  
 workflows:
   version: 2
