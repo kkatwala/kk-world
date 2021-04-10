@@ -16,6 +16,7 @@ jobs:
     steps:
           - checkout
           - run: echo $My_Env_Var1
+          - run: date; echo $My_Env_Var1;
           - run: ls -altr  
 workflows:
   version: 2
