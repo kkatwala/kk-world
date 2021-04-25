@@ -4,12 +4,12 @@ version: 2.1
 environment:
   My_Env_Var1: kalpesh
 jobs:
-  build:
+  save_hello_world_output:
     docker:
       - image: cimg/node:14.10.1
     steps:
           - checkout
-          - run: echo "hello world"       
+          - run: echo "hello world to file" > kk-hw.txt       
   build2:
     docker:
       - image: cimg/node:14.10.1
@@ -22,5 +22,6 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build
+      - save_hello_world_output
+   
       - build2
