@@ -11,7 +11,7 @@ jobs:
           - checkout
           - run: echo "hello world to file" > kk-hw.txt  
           - persist_to_workspace:
-              root: /tmp/kk
+              root: /tmp/kalpesh
               paths:
                 - target/application.jar
                 - build/*   
