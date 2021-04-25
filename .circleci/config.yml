@@ -8,20 +8,12 @@ jobs:
     docker:
       - image: cimg/node:14.10.1
     steps:
-          - checkout
-          - run: echo "hello world to file" > ~/kk-hw.txt  
-          - persist_to_workspace:
-              root: ~/ 
-              paths:
-                - kk-hw.txt
-  print_output_file:
-    docker:
-      - image: circi/node:14.10.1
-    steps:
-      - attach_workspace:
-        at: ~/
-    - run: cat ~/output.txt
-    
+        - checkout
+        - run: echo "hello world to file" > ~/kk-hw.txt  
+        - persist_to_workspace:
+            root: ~/ 
+            paths:
+              - kk-hw.txt
       
   build2:
     docker:
